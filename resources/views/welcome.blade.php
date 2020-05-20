@@ -79,12 +79,12 @@
     
     <div class="col-md-12">
         <section class="mb-4" >
-            <h2 class="h1-responsive font-weight-bold text-center my-4">Contactanos</h2>
+            <h2 class="h1-responsive font-weight-bold text-center my-4" >Contactanos</h2>
             <div class="row">
               
-                <div class="col-md-8 text-center">
-                  <div class="z-depth-1-half map-container "style="width:600px" >
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5249.412687018164!2d-78.14491837496018!3d0.04603242733610218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2a08efff110043%3A0x9fbe7fe7a62fd1f3!2sCAPILLA%20SALESIANA!5e0!3m2!1ses!2sec!4v1589967997629!5m2!1ses!2sec" width="600" height="450" frameborder="0" style="border:0;" aria-hidden="false" tabindex="0" allowfullscreen></iframe> 
+                <div class="col-md-8 " >
+                  <div  >
+                    <!--/. <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5249.412687018164!2d-78.14491837496018!3d0.04603242733610218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2a08efff110043%3A0x9fbe7fe7a62fd1f3!2sCAPILLA%20SALESIANA!5e0!3m2!1ses!2sec!4v1589967997629!5m2!1ses!2sec" width="450" height="350" frameborder="0" style="border:0;" aria-hidden="false" tabindex="0" allowfullscreen></iframe>  Carousel Wrapper--> 
                 </div>
                 </div>
                 <div class="col-md-4 border-left text-center mb-4">
