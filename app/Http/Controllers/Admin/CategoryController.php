@@ -23,13 +23,13 @@ class CategoryController extends Controller
         $this->validate($request,[
            'name'=>'required|regex:/^[\pL\s\-]+$/u|unique:categories',
            'description'=>'required',
-           'color'=>'required', 
+           
         ]);
         $category=Category::create([
             'name'=>$request->get('name'),
             'slug'=>str_slug($request->get('name')),
             'description'=>$request->get('description'),
-            'color'=>$request->get('color'),
+            
         ]);
         $message=$category ? 'Categoria agregada' : 'No agregada';
          
@@ -49,7 +49,10 @@ class CategoryController extends Controller
         $category->fill($request->all());
         $category->slug=str_slug($request->get('name'));
         $updated=$category->save();
-        return redirect()->route('category');
+        
+        $message=$updated ? 'Categoria Actualizada' : 'No se puedo actualizar';
+         
+        return redirect()->route('category')->with('message',$message);
     }
     public function destroy( $category)
     {

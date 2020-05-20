@@ -100,7 +100,8 @@ class CartController extends Controller
 			$this->saveOrderItem($producto, $order->id);
 		}
         \Session::forget('cart');
-        return redirect()->route('carrito');
+        $message = $order ? 'Pedido Realizado!' : 'NO se concreto el pedido!';
+        return redirect()->route('carrito')->with('message', $message);
     }
     
  

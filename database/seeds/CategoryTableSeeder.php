@@ -18,13 +18,13 @@ class CategoryTableSeeder extends Seeder {
 				'name' => 'verduras', 
 				'slug' => 'verduras', 
 				'description' => 'desc', 
-				'color' => '#440022'
+				
 			],
 			[
 				'name' => 'frutas', 
 				'slug' => 'frutas', 
 				'description' => 'desc', 
-				'color' => '#445500'
+				
 			]
 		);
  

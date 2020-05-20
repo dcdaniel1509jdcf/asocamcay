@@ -60,14 +60,7 @@
       }
   
     </style>
-    <style>
-      .footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-      }
-      </style>
+ 
       
     
 </head>
@@ -167,13 +160,12 @@
                             </div>
                     </nav>
 
-            <main>
-                <div class="container py-4">
+                    <main class="pt-5 mx-sm-5">
+          
+                <div class="container-fluid ">
                        
         
-            @if(\Session::has('message'))
-		        @include('layouts.message')
-	        @endif
+            
             @yield('content')
         
                 </div>

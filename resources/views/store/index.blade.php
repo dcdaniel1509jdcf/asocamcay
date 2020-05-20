@@ -3,10 +3,7 @@
 @section('content')
 
 <div class="container mt-5 pt-2">
-    <h3>@if (count($errors)>0) 
-        @include('layouts.errors')
-    @endif
-</h3>
+    
     
     <div class="row">
         @foreach ($products as $product)
@@ -29,14 +26,14 @@
 
                     <!-- Title -->
                     <p class="card-text"><i class="fas fa-cubes"> </i> {{$product->category->name}}</p>
-                    <h4 class="card-title font-weight-bold mb-2"><a href="{{ route('product-detail',$product->slug)}}">{{$product->name}}
+                    <h4 class="card-title  mb-2"><a href="{{ route('product-detail',$product->slug)}}">{{$product->name}}
                     </a></h4>
                     <!-- Subtitle -->
                    
               
                   </div>
 
-                  <p class=" h5 "><i class="fas fa-dollar-sign"> </i> {{$product->price}}</p>
+                  <p class="h5 card-text  "><i class="fas fa-dollar-sign"> </i> {{$product->price}}</p>
                   
                  
                   

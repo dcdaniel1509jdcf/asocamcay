@@ -43,10 +43,7 @@
             )
             !!}
     </div>
-<div class="form-group" hidden>
-        <label for="color">color:</label>
-        <input type="color" name="color" class="form-control">
-</div>
+
 <div class="form-group">
 {!! Form::submit('Actualizar',array('class'=>'btn btn-primary')) !!}    
 <a href="{{ route('category') }}" class="btn btn-warning">Cancelar</a>

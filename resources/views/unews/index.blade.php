@@ -14,7 +14,7 @@
   <div class="row">
 
     <!-- Grid column -->
-    <div class="col-sm-5 col-sm-4">
+    <div class="col-md-5 col-md-4">
       <!-- Featured image -->
       <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4">
         <img class="img-fluid" src="/imagenes/noticias/{{$news->image}}" alt="Sample image">
@@ -26,7 +26,7 @@
     <!-- Grid column -->
 
     <!-- Grid column -->
-    <div class="col-sm-7 col-sm-8">
+    <div class="col-md-7 col-md-8">
       <div>
         <!-- Title -->
         <h4 class="card-title font-weight-bold mb-2">{{ $news->title}}</h4>

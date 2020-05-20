@@ -11,11 +11,15 @@ class NewsController extends Controller
     public function index(){
         $news=News::orderBy('id','desc')->paginate(5);
       // $message = $news ? 'Noticias disponibles' : 'No existen noticias!';
-        return view('admin.news.index',compact('news'));
+      
+     
+
+      return view('admin.news.index',compact('news'));
     }
     public function uindex()
     {
         $news =News::all()->sortBy('created-at');
+        
         return view('unews.index', compact('news'));
     }
     public function show($news)
@@ -30,13 +34,19 @@ class NewsController extends Controller
     }
 
     public function store(Request $request){
+        $this->validate($request,[
+            'title'=>'required|unique:news',
+            'description'=>'required',
+            'content'=>'required',
+         ]);
+        
+        
         if($request->file('image')){
             $file=$request->file('image');
             //$path=Storage::disk('public')->put($request->file('image'));
             $namefi=time().$file->getClientOriginalName();
             $path=public_path().'/imagenes/noticias/';
             $file->move($path,$namefi); 
-                   
         }else{
             $namefi=null;
         }
@@ -46,7 +56,6 @@ class NewsController extends Controller
             $nameff=time().$file->getClientOriginalName();
             $path=public_path().'/archivos/noticias/';
             $file->move($path,$nameff);   
-           
         }else{
             $nameff=null;
         }
@@ -77,6 +86,22 @@ class NewsController extends Controller
     $news->title = $request->get('title');
     $news->description = $request->get('description');
     $news->content = $request->get('content');
+    if($request->file('image')){
+        $file=$request->file('image');
+        //$path=Storage::disk('public')->put($request->file('image'));
+        $namefi=time().$file->getClientOriginalName();
+        $path=public_path().'/imagenes/noticias/';
+        $file->move($path,$namefi); 
+        $news->image=$namefi;  
+    }
+    if($request->file('file')){
+        $file=$request->file('file');
+        //$path=Storage::disk('public')->put($request->file('image'));
+        $nameff=time().$file->getClientOriginalName();
+        $path=public_path().'/archivos/noticias/';
+        $file->move($path,$nameff);   
+        $news->file=$nameff;
+    }
     $updated = $news->save();
     $message = $updated ? 'Noticia actualizado correctamente!' : 'Noticia NO pudo actualizarse!';
    return redirect()->route('adm-news')->with('message', $message);

@@ -33,13 +33,14 @@
         </p>
 
       </div>
+      @if( $news->file != null)
       <div class="mt-5">
-
         <h5>  <hr class="mb-5 mt-4">
           <a href="/archivos/noticias/{{$news->file}}">Archivos Disponibles</a>
         </h5>
-
       </div>
+      @endif
+      
     </div>
   </div>
  

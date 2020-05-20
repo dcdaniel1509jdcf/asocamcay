@@ -60,7 +60,21 @@
                 !!}
             </div>
         
-        
+          
+            <div class="form-group">
+                <label for="image">Imagen:</label>
+                
+                {!! 
+                    Form::file('image') 
+                !!}
+            </div>
+            <div class="form-group">
+                <label for="file">Archivo:</label>
+                
+                {!! 
+                    Form::file('file') 
+                !!}
+            </div>
         
         <div class="form-group">
             {!! Form::submit('Actualizar', array('class'=>'btn btn-primary')) !!}

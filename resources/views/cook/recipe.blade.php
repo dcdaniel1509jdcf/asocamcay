@@ -5,12 +5,19 @@
 <div class="container ">
 
     <hr class="mb-5">
-   
     <article class="article text-center">
       <h2 class="article__title">Recetas de Cocina</h2>
-      <div class="article__date">2020/04/04</div>
-    
+      
+   
     </article>
+   
+    @if ($recipe->isEmpty())
+    <article class="article text-center">
+      <h4 class="article__title">No Disponibles</h4>
+      
+   
+    </article>
+@endif 
   <!--Accordion wrapper-->
 <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
 
