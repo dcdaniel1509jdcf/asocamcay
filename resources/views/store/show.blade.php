@@ -35,12 +35,9 @@
                         <strong class="">{{ $product->category->name }}</strong>
                       </h5>
                       <h5 class="mb-2">
-                       
-                        Precio: $ {{ $product->price }} <i class="fas fa-arrow-alt-circle-right"></i> {{ $product->extract }}.
-                        
-                    
+                        Precio: $ {{ $product->price }}
                       </h5>
-                      
+                      <h6 class="mb-2 h6-responsive">Peso: {{ $product->extract }}</h6>
                       
                       
                         

@@ -13,6 +13,7 @@
   <h4 class="card-title h4 pb-2"><strong>ASOCAMCAY</strong></h4>
 
   <!-- Card image -->
+  <section>
   <div class="view overlay my-4">
     <!--Carousel Wrapper-->
 <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
@@ -27,38 +28,29 @@
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
       <div class="view">
-        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
+        <img class="d-block " src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
           alt="First slide">
         <div class="mask rgba-black-light"></div>
       </div>
-      <div class="carousel-caption">
-        <h3 class="h3-responsive">Light mask</h3>
-        <p>First text</p>
-      </div>
+      
     </div>
     <div class="carousel-item">
       <!--Mask color-->
       <div class="view">
-        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
+        <img class="d-block" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
           alt="Second slide">
         <div class="mask rgba-black-strong"></div>
       </div>
-      <div class="carousel-caption">
-        <h3 class="h3-responsive">Strong mask</h3>
-        <p>Secondary text</p>
-      </div>
+      
     </div>
     <div class="carousel-item">
       <!--Mask color-->
       <div class="view">
-        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
+        <img class="d-block" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
           alt="Third slide">
         <div class="mask rgba-black-slight"></div>
       </div>
-      <div class="carousel-caption">
-        <h3 class="h3-responsive">Slight mask</h3>
-        <p>Third text</p>
-      </div>
+      <
     </div>
   </div>
   <!--/.Slides-->
@@ -73,73 +65,29 @@
   </a>
   <!--/.Controls-->
 </div>
-<!--/.Carousel Wrapper-->
   </div>
+<!--/.Carousel Wrapper-->
+</section>  
+<section>
   <h5 class="indigo-text h5 mb-4">Asociación Agroecológica la Campesina de Cayambe</h5>
   <p class="card-text text-justify">Esta organización con el Apoyo de la Fundación Casa Campesina Cayambe, se dedica básicamente a la producción y comercialización de productos agropecuarios con enfoque agroecológico, luchando permanentemente por concretar un sistema con características de sostenibilidad en los ámbitos social, económico y ambiental.</p>
   <a class="fa-lg p-2 m-2 li-ic"><i class="fab fa-linkedin-in grey-text"></i></a>
   <a class="fa-lg p-2 m-2 tw-ic"><i class="fab fa-twitter grey-text"></i></a>
   <a class="fa-lg p-2 m-2 fb-ic"><i class="fab fa-facebook-f grey-text"></i></a>
-
+  </section>
   <div class="row mt-5 pt-4" id="contact">
-    <div class="col-md-2">
-    </div>
-    <div class="col-md-8">
+    
+    <div class="col-md-12">
         <section class="mb-4" >
-            <!--Section heading-->
             <h2 class="h1-responsive font-weight-bold text-center my-4">Contactanos</h2>
-            <!--Section description-->
             <div class="row">
-                <!--Grid column-->
-                <div class="col-md-9 mb-md-0 mb-5">
-                    <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-                        <!--Grid row-->
-                        <div class="row">
-                            <!--Grid column-->
-                            <div class="col-md-6">
-                                <div class="md-form mb-0">
-                                    <input type="text" id="name" name="name" class="form-control">
-                                    <label for="name" class="">Nombre</label>
-                                </div>
-                            </div>
-                            <!--Grid column-->
-                            <div class="col-md-6">
-                                <div class="md-form mb-0">
-                                    <input type="text" id="email" name="email" class="form-control">
-                                    <label for="email" class="">Email</label>
-                                </div>
-                            </div>
-                            <!--Grid column-->
-                        </div>
-                        <!--Grid row-->
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="md-form mb-0">
-                                    <input type="text" id="subject" name="subject" class="form-control">
-                                    <label for="subject" class="">Asunto</label>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Grid row-->
-                        <div class="row">
-                            <!--Grid column-->
-                            <div class="col-md-12">
-                                <div class="md-form">
-                                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                                    <label for="message">Tu mensaje</label>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Grid row-->
-                    </form>
-        
-                    <div class="text-center text-md-left">
-                        <a class="btn btn-primary btn-block" onclick="document.getElementById('contact-form').submit();">Enviar</a>
-                    </div>
-                    <div class="status"></div>
+              
+                <div class="col-md-8 text-center">
+                  <div class="z-depth-1-half map-container "style="width:600px" >
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5249.412687018164!2d-78.14491837496018!3d0.04603242733610218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2a08efff110043%3A0x9fbe7fe7a62fd1f3!2sCAPILLA%20SALESIANA!5e0!3m2!1ses!2sec!4v1589967997629!5m2!1ses!2sec" width="600" height="450" frameborder="0" style="border:0;" aria-hidden="false" tabindex="0" allowfullscreen></iframe> 
                 </div>
-                <!--Grid column-->
-                <div class="col-md-3 text-center">
+                </div>
+                <div class="col-md-4 border-left text-center mb-4">
                     <ul class="list-unstyled mb-0">
                         <li><i class="fas fa-map-marker-alt fa-2x"></i>
                             <p>Cayambe,Pichincha</p>
@@ -158,7 +106,7 @@
             </div>
         </section>
     </div>
-    <div class="col-md-2">
+    <div class="col">
       
     </div>
   </div>

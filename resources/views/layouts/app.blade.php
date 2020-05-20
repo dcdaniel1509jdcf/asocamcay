@@ -67,7 +67,7 @@
 <body class="white">
     <div id="app">
                        
-                    <nav class="navbar fixed-top navbar-expand-sm navbar-light white scrolling-navbar">
+                    <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
                             <div class="container">
                         
                               <!-- Brand -->
