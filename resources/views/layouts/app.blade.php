@@ -130,7 +130,7 @@
                                           aria-haspopup="true" aria-expanded="false">
                                           <i class="fas fa-user"></i>
                                         </a>
-                                        <div class="dropdown-menu dropdown-menu-right dropdown-default"
+                                        <div class="dropdown-menu dropdown-default"
                                           aria-labelledby="navbarDropdownMenuLink-333">
                                           <a class="dropdown-item" href="{{ route('login') }}">Ingresar</a>
                                           <a class="dropdown-item" href="{{ route('register') }}">Registrar</a>
