@@ -3,13 +3,14 @@
 @section('content')
     <div class="row mt-5 pt-4">
             <div class="col"></div>
-            <div class="col-6 ">
+            <div class="col-sm-6 ">
     <!-- Card -->
     <div class="card booking-card ">
       <!-- Card content -->
+      <h4 class="card-header info-color white-text text-center font-weight-bold "><a>Mi Cuenta</a></h4>
       <div class="card-body">
         <!-- Title -->
-        <h4 class="text-center font-weight-bold "><a>Mi Cuenta</a></h4>
+        
         <!-- Data -->
        <hr>
     @if (Auth::user()->email != $user->email){
