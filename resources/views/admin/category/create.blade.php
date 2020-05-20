@@ -5,7 +5,7 @@
     <div class="col">
         
         </div> 
-    <div class="col-5">
+    <div class="col-sm-6">
 
     
         
@@ -16,7 +16,7 @@
               <strong>Nueva Categoria</strong>
             </h3>
                   <br>
-                  <div class="card-body px-lg-5 pt-0">  
+                  <div class="card-body px-sm-5 pt-0">  
 {!! Form::open(['action'=>'Admin\CategoryController@store']) !!}
 
     <div class="form-group">

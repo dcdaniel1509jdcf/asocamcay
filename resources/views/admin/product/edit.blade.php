@@ -5,7 +5,7 @@
     <div class="col">
         
         </div> 
-    <div class="col-5">
+    <div class="col-sm-6">
  
         <div class="card">
 
@@ -13,7 +13,7 @@
               <strong>Editar Producto</strong>
             </h3>
                   <br>
-                  <div class="card-body px-lg-5 pt-0"> 
+                  <div class="card-body px-sm-5 pt-0"> 
         {!! Form::model($product, array('action' => array('Admin\ProductController@update', $product->slug), 'enctype' => 'multipart/form-data')) !!}
                     
         <input type="hidden" name="_method" value="PUT" >

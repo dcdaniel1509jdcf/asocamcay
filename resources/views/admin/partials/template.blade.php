@@ -177,7 +177,7 @@
                                         <a id="navbarDropdown" class="nav-link dropdown-toggle waves-effect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                             <i class="fas fa-user-circle"></i>
                                         </a>
-                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" aria-labelledby="navbarDropdownMenuLink-333">
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown" aria-labelledby="navbarDropdownMenuLink-333">
                                             <a class="dropdown-item" href="{{ route('user-edit-profile',Auth::user()->id ) }}"><i class="fas fa-cogs"></i > {{ __('Mi perfil') }}</a> 
                                             <a class="dropdown-item" href="{{ route('user-order',Auth::user()->id ) }}"><span class="fas fa-cubes"></span> {{ __('Pedidos') }}</a> 
                                             <a class="dropdown-item" href="{{ route('logout') }}"
@@ -197,7 +197,7 @@
                     </nav>
                     
                     </header>
-            <main class="pt-5 mx-lg-5">
+            <main class="pt-5 mx-sm-5">
                 <div class="container-fluid mt-5">
                  
         

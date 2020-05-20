@@ -32,10 +32,10 @@
     <div id="collapseOne1{{$recipe->id}}" class="collapse " role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
       <div class="card-body">
         <div class="row">
-            <div class="col-md-6 mb-4">
+            <div class="col-sm-6 mb-4">
               <img src="/imagenes/productos/{{$recipe->image}}" class="img-fluid z-depth-1-half" alt="">
             </div>
-            <div class="col-md-6 mb-4">
+            <div class="col-sm-6 mb-4">
                 <blockquote class="blockquote bq-primary">
                     <h4 class="bq-title text-uppercase">Ingredientes</h4>
                     <p class="text-justify text-reset ">

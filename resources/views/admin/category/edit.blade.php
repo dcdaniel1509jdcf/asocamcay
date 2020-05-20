@@ -5,7 +5,7 @@
     <div class="col">
         
         </div> 
-    <div class="col-5">
+    <div class="col-sm-6">
 
 
         <div class="card">
@@ -14,7 +14,7 @@
               <strong>Editar Categoria</strong>
             </h3>
                   <br>
-                  <div class="card-body px-lg-5 pt-0">  
+                  <div class="card-body px-sm-5 pt-0">  
 {!! Form::model($category,array('action'=>array('Admin\CategoryController@update',$category))) !!}
 <input type="hidden" name="_method" value="PUT">
     <div class="form-group">

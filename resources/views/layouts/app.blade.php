@@ -60,12 +60,21 @@
       }
   
     </style>
+    <style>
+      .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+      }
+      </style>
+      
     
 </head>
 <body class="white">
     <div id="app">
                        
-                    <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+                    <nav class="navbar fixed-top navbar-expand-sm navbar-light white scrolling-navbar">
                             <div class="container">
                         
                               <!-- Brand -->
@@ -135,7 +144,7 @@
                                         <a id="navbarDropdown" class="nav-link dropdown-toggle waves-effect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                             <i class="fas fa-user-circle"></i>
                                         </a>
-                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" aria-labelledby="navbarDropdownMenuLink-333">
+                                        <div class="dropdown-menu " aria-labelledby="navbarDropdown" aria-labelledby="navbarDropdownMenuLink-333">
                                             <a class="dropdown-item" href="{{ route('user-edit-profile',Auth::user()->id ) }}"><i class="fas fa-cogs"></i > {{ __('Mi perfil') }}</a> 
                                             <a class="dropdown-item" href="{{ route('user-order',Auth::user()->id ) }}"><span class="fas fa-cubes"></span> {{ __('Pedidos') }}</a> 
                                             @if (Auth::user()->id==1)
@@ -170,34 +179,18 @@
                 </div>
             </main>
     </div>
+
     <!-- Footer -->
-    <footer class="page-footer font-small cyan darken-3 pt-4 ">
-    
-      <!-- Footer Elements -->
-      <div class="container">
-    
-        <!-- Call to action -->
-        <ul class="list-unstyled list-inline text-center py-2">
-          <li class="list-inline-item">
-            <h5 class="mb-1"></h5>
-          </li>
-          <li class="list-inline-item">
-            <a href="#!" class="btn btn-outline-white btn-rounded">ASOMCAMCAY</a>
-          </li>
-        </ul>
-        <!-- Call to action -->
-    
-      </div>
-      <!-- Footer Elements -->
-    
-      <!-- Copyright -->
-      <div class="footer-copyright text-center py-3">© 2019 Copyright:
-        <a href="#!"> JC</a>
-      </div>
-      <!-- Copyright -->
-    
-    </footer>
-    <!-- Footer -->
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
 </body>
   
   

@@ -5,14 +5,14 @@
     <div class="col">
         
         </div> 
-    <div class="col-5">
+    <div class="col-sm-5">
         <div class="card">
 
             <h3 class="card-header info-color white-text text-center py-4">
               <strong>Editar Receta</strong>
             </h3>
                   <br>
-                  <div class="card-body px-lg-5 pt-0"> 
+                  <div class="card-body px-sm-5 pt-0"> 
         {!! Form::model($recipe, array('action' => array('Admin\RecipeController@update', $recipe->id),'enctype' => 'multipart/form-data')) !!}
                     
         <input type="hidden" name="_method" value="PUT">

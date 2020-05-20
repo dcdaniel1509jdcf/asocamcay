@@ -6,7 +6,7 @@
     <div class="card card-cascade wider reverse mt-5 pt-4">
       <div class="card-body card-body-cascade ">
             <div class="row">
-                    <div class="col-lg-5">
+                    <div class="col-sm-5">
                       <!--Carousel Wrapper-->
                       <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails"
                         data-ride="carousel">
@@ -21,7 +21,7 @@
                       </div>
                       
                     </div>
-                    <div class="col-lg-7">
+                    <div class="col-sm-7">
                       <hr>
                             <h5 class="text-uppercase">
                                     <strong class="blue-text">{{ $product->category->name }}</strong>
@@ -30,7 +30,7 @@
                         <strong class="red-text">{{ $product->name }}</strong>
                       </h2>
                       <h5 class="mb-2">
-                        <span class="alert alert-info col-md-5 " role="alert">
+                        <span class="alert  col-sm-5 " role="alert">
                           <strong>Precio: $ {{ $product->price }}</strong> <i class="fas fa-arrow-alt-circle-right"></i> {{ $product->extract }}.
                         </span>
                     
@@ -60,7 +60,7 @@
                           </div>
                             <div>
                              
-                                <div class="md-form form-lg col-md-4">
+                                <div class="md-form form-lg col-sm-4">
                                   <div class="md-form input-group mb-2">
                                     <div class="input-group-prepend">
                                       <span class="input-group-text md-addon" id="basic-addon2">Cantidad </span>

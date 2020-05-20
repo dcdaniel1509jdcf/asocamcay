@@ -5,13 +5,13 @@
 <div class="col">
     
     </div> 
-<div class="col-5">
+<div class="col-sm-6">
                 <div class="card">
             <h3 class="card-header info-color white-text text-center py-4">
               <strong>Nuevo Producto</strong>
             </h3>
                   <br>
-                  <div class="card-body px-lg-5 pt-0">     
+                  <div class="card-body px-sm-5 pt-0">     
 {!! Form::open(['action'=>'Admin\ProductController@store' , 'files'=>true]) !!}
 <div class="form-group">
         <label class="control-label" for="category_id">Categoría</label>

@@ -25,7 +25,7 @@
         {!! Form::open(['action'=>'Admin\ReportsController@store']) !!}
         <div class="row">
         <div class="col">
-          <div class="col-auto col-8">
+          <div class="col-auto col-sm-8">
               <label for="finicial">Fecha Inicial</label>
               <div class="input-group mb-2">
                 <div class="input-group-prepend">
@@ -38,7 +38,7 @@
                 array(
                     'class'=>'form-control',
                     'data-provide'=>'datepicker',
-                    'data-date-format'=>'yyyy-mm-dd 23:59:59',
+                    'data-date-format'=>'yyyy-mm-dd 00:00:00',
                     'readonly' => 'true'
                     
                 )
@@ -49,7 +49,7 @@
         </div>
         
         <div class="col">
-          <div class="col-auto col-8">
+          <div class="col-auto col-sm-8">
               <label for="ffinal">Fecha Final</label>
               <div class="input-group mb-2">
                 <div class="input-group-prepend">
@@ -97,7 +97,7 @@
         {!! Form::open(['action'=>'Admin\ReportsController@store2']) !!}
         <div class="row">
         <div class="col">
-          <div class="col-auto col-8">
+          <div class="col-auto col-sm-8">
               <label for="finicial">Fecha Inicial</label>
               <div class="input-group mb-2">
                 <div class="input-group-prepend">
@@ -110,7 +110,7 @@
                 array(
                     'class'=>'form-control',
                     'data-provide'=>'datepicker',
-                    'data-date-format'=>'yyyy-mm-dd 23:59:59',
+                    'data-date-format'=>'yyyy-mm-dd 00:00:00',
                     'readonly' => 'true'
                     
                 )
@@ -121,7 +121,7 @@
         </div>
         
         <div class="col">
-          <div class="col-auto col-8">
+          <div class="col-auto col-sm-8">
               <label for="ffinal">Fecha Final</label>
               <div class="input-group mb-2">
                 <div class="input-group-prepend">
@@ -158,7 +158,7 @@
       <h5 class="text-uppercase mb-0 py-1">
         <a class="collapsed font-weight-bold white-text" data-toggle="collapse" href="#collapse98"
           aria-expanded="false" aria-controls="collapse98">
-          I am the third title of accordion
+          Listado de Clientes
         </a>
       </h5>
     </div>

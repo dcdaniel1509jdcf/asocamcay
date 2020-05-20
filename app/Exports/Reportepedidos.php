@@ -47,7 +47,7 @@ class Reportepedidos implements FromCollection,WithHeadings
             $users=DB::table('order_items')
             ->join('products','order_items.product_id','=','products.id')
             ->join('orders','order_items.order_id','=','orders.id')
-            ->select('products.name',DB::raw('sum(order_items.quantity) as  num',))
+            ->select('products.name',DB::raw('sum(order_items.quantity) as  num'))
             ->whereBetween('orders.created_at',array($this->data , $this->data1))
             ->groupBy('products.name')
             ->get();

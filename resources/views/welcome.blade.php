@@ -34,7 +34,7 @@
   
   </div>
 <div class="jumbotron p-4 p-md-5 text-white rounded bg-white">
-    <div class="col-md-6 px-0">
+    <div class="col-sm-6 px-0">
       <h1 class="display-4 font-italic text-body">ASOCAMCAY</h1>
       <p class="lead my-3 text-body">Asociación Agroecológica la Campesina de Cayambe.</p>
       <p class="lead mb-0 text-body  text-justify">Esta organización con el Apoyo de la Fundación Casa Campesina Cayambe, se dedica básicamente a la producción y comercialización de productos agropecuarios con enfoque agroecológico, luchando permanentemente por concretar un sistema con características de sostenibilidad en los ámbitos social, económico y ambiental.</p>
@@ -65,14 +65,14 @@
     <div class="row wow fadeIn" hidden>
 
       <!--Grid column-->
-      <div class="col-lg-6 col-md-12 px-4">
+      <div class="col-sm-6 col-sm-12 px-4">
 
         <!--First row-->
         <div class="row" hidden>
           <div class="col-1 mr-3">
             <i class="fas fa-code fa-2x indigo-text"></i>
           </div>
-          <div class="col-10">
+          <div class="col-sm-10">
             <h5 class="feature-title"></h5>
             <p class="grey-text">Descripcion</p>
           </div>

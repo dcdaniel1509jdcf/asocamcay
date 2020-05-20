@@ -11,7 +11,7 @@
     <div class="row">
         @foreach ($products as $product)
     
-        <div class="col-md-3 mb-4">
+        <div class="col-sm-3 mb-4">
             <div class="card card-cascade wider">
   
                 <!-- Card image -->
