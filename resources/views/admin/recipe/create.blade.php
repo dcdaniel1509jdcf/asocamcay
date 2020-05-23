@@ -25,12 +25,17 @@
                     'name', 
                     null, 
                     array(
-                        'class'=>'form-control',
+                        'class'=>'form-control @error(name) is-invalid @enderror',
                         'placeholder' => 'Ingresa el nombre...',
                         'autofocus' => 'autofocus'
                     )
                 ) 
             !!}
+            @error('name')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+        @enderror
         </div>
         
         <div class="form-group">
@@ -41,11 +46,16 @@
                     'ingredients', 
                     null, 
                     array(
-                        'class'=>'form-control',
+                        'class'=>'form-control  @error(ingredients) is-invalid @enderror',
                         'placeholder' => 'Ingrese el ...',
                     )
                 ) 
             !!}
+            @error('ingredients')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+        @enderror
         </div>
         
         <div class="form-group">
@@ -56,13 +66,18 @@
                     'description', 
                     null, 
                     array(
-                        'class'=>'form-control'
+                        'class'=>'form-control  @error(description) is-invalid @enderror'
                     )
                 ) 
             !!}
+            @error('description')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+        @enderror
         </div>
         
-        <div class="form-group">
+        <div class="form-group" hidden>
             <label for="description">Notas:</label>
             
             {!! 
@@ -70,10 +85,15 @@
                     'notes', 
                     null, 
                     array(
-                        'class'=>'form-control'
+                        'class'=>'form-control @error(notes) is-invalid @enderror'
                     )
                 ) 
             !!}
+            @error('notes')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+        @enderror
         </div>
 
        
@@ -99,9 +119,7 @@
         </div>
 </div>
 <div class="col">
-    @if (count($errors)>0) 
-                @include('admin.partials.errors')
-            @endif
+  
 </div>
 </div>
 @endsection

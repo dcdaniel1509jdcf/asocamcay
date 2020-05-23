@@ -7,7 +7,9 @@
 @endif
 @endforeach
 <!-- Table with panel -->
-<div class="mt-5 pt-4 card card-cascade narrower">
+<div class="row justify-content-center">
+  <div class="col "></div>
+<div class=" col-sm-10 center mt-3 pt-4 card card-cascade narrower">
 
   <!--Card image-->
   <div
@@ -57,6 +59,11 @@
         <!--Table head-->
         <!--Table body-->
         <tbody>
+          @if ($orders->isEmpty())
+          <article class="article text-center">
+            <h4 class="article__title">No Disponibles</h4>
+          </article>
+          @endif 
                 @foreach($orders as $order)
           <tr>
             
@@ -86,6 +93,8 @@
       <!--Table-->
     </div>
   </div>
+</div>
+<div class="col"></div>
 </div>
 <!-- Table with panel -->
 @include('admin.partials.modal-detalle-pedido')

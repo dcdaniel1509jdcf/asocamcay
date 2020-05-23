@@ -26,7 +26,11 @@ class UserController extends Controller
         $this->validate($request, [
             'name' => 'required|max:100',
             'last_name' => 'required|max:100',
-            'email' => 'required|email',
+            
+            'email' => 'required|email|unique:users,email,'.$user->id,
+            'address' => 'required',
+            'ci' => 'required',
+            'contact' => 'required',
             'password' =>  ($request->get('password') != "") ? 'required|confirmed' : "",
         ]);
         
@@ -41,9 +45,9 @@ class UserController extends Controller
         
         $updated = $user->save();
         
-      //  $message = $updated ? 'Usuario actualizado correctamente!' : 'El Usuario NO pudo actualizarse!';
+     $message = $updated ? 'Usuario actualizado correctamente!' : 'El Usuario NO pudo actualizarse!';
         
-        return redirect()->route('inicio');//->with('message', $message);
+        return redirect()->route('inicio')->with('message', $message);
     }
    
 }

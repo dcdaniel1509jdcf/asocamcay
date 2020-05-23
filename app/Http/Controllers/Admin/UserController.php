@@ -55,8 +55,10 @@ class UserController extends Controller
         $this->validate($request, [
             'name' => 'required|max:100',
             'last_name' => 'required|max:100',
-            'email' => 'required|email',
-            
+            'email' => 'required|email|unique:users,email,'.$user->id,
+            'address' => 'required',
+            'ci' => 'required',
+            'contact' => 'required',
             'password' =>  ($request->get('password') != "") ? 'required|confirmed' : "",
             
             'type' => 'required|in:user,admin',
@@ -76,7 +78,7 @@ class UserController extends Controller
         
         $updated = $user->save();
         
-       $message = $updated ? 'Usuario actualizado correctamente!' : 'El Usuario NO pudo actualizarse!';
+       $message = $updated ? 'Actualizado correctamente!' : ' NO pudo actualizarse!';
         
         return redirect()->route('adm-user')->with('message', $message);
     }
@@ -84,8 +86,8 @@ class UserController extends Controller
     {
         $deleted = $user->delete();
         
-       // $message = $deleted ? 'Usuario eliminado correctamente!' : 'El Usuario NO pudo eliminarse!';
+       $message = $deleted ? 'Eliminado correctamente!' : 'El Usuario NO pudo eliminarse!';
         
-        return redirect()->route('adm-user');//->with('message', $message);
+        return redirect()->route('adm-user')->with('message', $message);
     }
 }

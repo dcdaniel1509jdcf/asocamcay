@@ -3,26 +3,20 @@
 @section('content')
               
     <!-- Card -->
-    <div class="card card-cascade wider reverse mt-5 pt-4">
-      <div class="card-body card-body-cascade ">
-            <div class="row">
+   
+   
+        <div class="card card-cascade wider reverse mt-5 pt-4">
+          <div class="row"> 
+        <div class="card-body card-body-cascade ">
+        <div class="row">
+          
                     <div class="col-sm-6">
                       <!--Carousel Wrapper-->
-                            
                         
                               <div class="view view-cascade overlay">
                                 <img  class="img-fluid mx-auto" src="/imagenes/productos/{{$product->image}}" alt="Imagen no disponible">
                                
                               </div>
-
-
-
-                 
-
-
-
-
-
                       
                     </div>
                     <div class="border-left col-sm-6 ">
@@ -98,7 +92,10 @@
                      
                     </div>
                   </div>
-      </div>
-    </div>
+      
+      
+                </div>
+              </div>
+            </div>
     <!-- Card -->                                                           
 @endsection

@@ -5,10 +5,18 @@
 <div class="container mt-5 pt-2">
     
     
-    <div class="row">
+    <div class="row justify-content-center">
+     
+      @if ($products->isEmpty())
+      <article class="article">
+        <h3 class="indigo-text h3 text-center">Recetas</h3>
+        <h4 class="h4 text-center indigo-text">No Disponibles</h4>
+      </article>
+      @endif 
+     
         @foreach ($products as $product)
     
-        <div class="col-sm-3 mb-4">
+        <div class="col-sm-3 mb-4 ">
             <div class="card card-cascade wider">
   
                 <!-- Card image -->
@@ -26,14 +34,14 @@
 
                     <!-- Title -->
                     <p class="card-text"><i class="fas fa-cubes"> </i> {{$product->category->name}}</p>
-                    <h4 class="card-title  mb-2"><a href="{{ route('product-detail',$product->slug)}}">{{$product->name}}
+                    <h4 class="indigo-text h4 mb-2"><a href="{{ route('product-detail',$product->slug)}}">{{$product->name}}
                     </a></h4>
                     <!-- Subtitle -->
                    
               
                   </div>
 
-                  <p class="h5 card-text  "><i class="fas fa-dollar-sign"> </i> {{$product->price}}</p>
+                  <h4 class="h5 indigo-text">$ {{$product->price}}</h4>
                   
                  
                   

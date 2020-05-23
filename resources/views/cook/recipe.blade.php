@@ -2,22 +2,16 @@
 
 @section('content')
 
-<div class="container ">
+<div class="container mt-5 pt-1 ">
 
-    <hr class="mb-5">
-    <article class="article text-center">
-      <h2 class="article__title">Recetas de Cocina</h2>
-      
    
-    </article>
-   
+    <h3 class="indigo-text h3 text-center">Recetas</h3>
     @if ($recipe->isEmpty())
-    <article class="article text-center">
-      <h4 class="article__title">No Disponibles</h4>
-      
-   
+    <article class="article">
+      <h4 class="h4 text-center indigo-text">No Disponibles</h4>
     </article>
-@endif 
+    @endif 
+
   <!--Accordion wrapper-->
 <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
 
@@ -26,57 +20,67 @@
   <div class="list-group">
 
     
-    <div class="list-group-item border border-0 " role="tab" id="headingOne1">
+    <div class="list-group-item  rounded-top  bordered mdb-color darken-3 " role="tab" id="headingOne1">
       <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1{{$recipe->id}}" aria-expanded="true"
         aria-controls="collapseOne1{{$recipe->id}}">
-        <h5 class="article__title">
-            {{$recipe->name}}  <i class="fas fa-angle-down rotate-icon "></i>
-        </h5>
+        <h6 class="h6 text-center indigo-text white-text">
+          <strong>{{$recipe->name}}</strong>  <i class="fas fa-angle-down rotate-icon "></i>
+        </h6>
       </a>
     </div>
 
  
     <div id="collapseOne1{{$recipe->id}}" class="collapse " role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionEx">
-      <div class="card-body">
-        <div class="row">
-            <div class="col-sm-6 mb-4">
-              <img src="/imagenes/productos/{{$recipe->image}}" class="img-fluid z-depth-1-half" alt="">
-            </div>
-            <div class="col-sm-6 mb-4">
-                <blockquote class="blockquote bq-primary">
-                    <h4 class="bq-title text-uppercase">Ingredientes</h4>
-                    <p class="text-justify text-reset ">
+      <div class=" card z-depth-0 bordered">
+        <div class="my-1 p-0 ">
+
+          <!-- Card image -->
+          <div class="view rounded-top text-center">
+            <img src="/imagenes/productos/{{$recipe->image}}" class="img-fluid mx-auto d-block rounded mb-0" alt="Sample image">
+          </div>
+        
+          <!-- Card content -->
+          <div class=" my-2">
+        
+            <!-- Title -->
+            <h3 class="indigo-text h3 text-center text-uppercase"> {{$recipe->name}}</h3>
+            <!-- Text -->
+            <p class="card-text py-2">
+              <div class="container">
+                <div class="row">
+                  <div class="col"></div>
+                  <div class="col-sm-4">
+                    <h6 class="indigo-text h6  text-uppercase">Ingredientes</h6> 
+                    <p class="text-justify ">
                       <?php 
                       echo nl2br($recipe->ingredients);
                       ?>
                     </p>
-                   
-                  </blockquote>                 
-              <hr>
-              <blockquote class="blockquote bq-primary">
-                <h4 class="bq-title text-uppercase">Desarollo</h4>
+                  </div>
+                  <div class="col-sm-6">
+                    <h6 class="indigo-text h6  text-uppercase">Instrucciones</h6> 
+                    <p class="text-justify"> <?php 
+                      echo nl2br($recipe->description);
+                      ?></p>
+                  
+                  </div>
+                  <div class="col"></div>
+                </div>
                 
-                <p class="text-justify"> <?php 
-                  echo nl2br($recipe->description);
-                  ?></p>
-              </blockquote> 
-              <hr>
-              <blockquote class="blockquote bq-danger">
-                <h4 class="bq-title text-uppercase">Notas</h4>
-                <p class="text-justify"> <?php 
-                  echo nl2br($recipe->notes);
-                  ?></p>
-              </blockquote> 
-    
+                  
+               
+                    
+             
+              </div>
+            </p>
+            
+           
         
-              
-    
-            </div>
-         
-    
           </div>
-
+        
+        </div>
       </div>
+
     </div>
 
   </div>
@@ -88,7 +92,10 @@
 </div>
 
 
+
   </div>
+
+  
 
 
 @endsection

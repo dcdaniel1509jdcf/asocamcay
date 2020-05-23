@@ -3,19 +3,14 @@
 @section('content')
 <div class="row">
     <div class="col">
-        
         </div> 
     <div class="col-sm-6">
-
-    
-        
-
         <div class="card">
 
             <h3 class="card-header info-color white-text text-center py-4">
               <strong>Nueva Categoria</strong>
             </h3>
-                  <br>
+                  
                   <div class="card-body px-sm-5 pt-0">  
 {!! Form::open(['action'=>'Admin\CategoryController@store']) !!}
 
@@ -26,13 +21,18 @@
         'name',
         null,
         array(
-            'class'=>'form-control',
+            'class'=>'form-control @error(name) is-invalid @enderror',
             'placeholder'=>'Ingresar el nombre.',
             'autofocus'=>'autofocus'
             
         )
     )
     !!}
+    @error('name')
+            <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+            </span>
+        @enderror
 </div>    
     <div class="form-group">
             <label for="description">Descripcion:</label>
@@ -41,11 +41,16 @@
                 'description',
                 null,
                 array(
-                    'class'=>'form-control'
+                    'class'=>'form-control @error(name) is-invalid @enderror'
                     
                 )
             )
             !!}
+            @error('description')
+            <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+            </span>
+        @enderror
             
 </div>
 
@@ -60,9 +65,7 @@
         </div>
 </div>
 <div class="col">
-    @if (count($errors)>0) 
-        @include('admin.partials.errors')
-    @endif
+    
 </h3>
 </div>
 </div>

@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('inicio');
+Route::get('/', 'Admin\HomeController@indexusr')->name('inicio');
 
 Auth::routes();
 Route::get('/exportar', 'HomeController@export')->name('descreportes');
@@ -105,10 +103,12 @@ Route::get('/home', array(
 
 // Admin
 Route::group([ 'middleware' => ['admin']], function(){
-
+    Route::get('admin/home/edit/','Admin\HomeController@edit')->name('adm-edit-home'); 
+Route::resource('admin/home', 'Admin\HomeController');
 Route::get('admin/home', function() {
     return view('admin.home');
 })->name('adm-home');
+
 //category
 Route::resource('/category', 'Admin\CategoryController');
 Route::get('admin/category', 'Admin\CategoryController@index')->name('category');
@@ -140,6 +140,7 @@ Route::get('admin/recipe/{recipe}','Admin\RecipeController@destroy')->name('adm-
 Route::get('admin/reports/', 'Admin\ReportsController@index')->name('adm-reports');
 Route::post('admin/reports/index', 'Admin\ReportsController@store');
 Route::post('admin/reports/index2', 'Admin\ReportsController@store2');
+Route::get('admin/reports/index3', 'Admin\ReportsController@store3')->name('listClient');
 
 //News
 Route::resource('admin/news', 'Admin\NewsController');
@@ -147,6 +148,9 @@ Route::get('admin/news', 'Admin\NewsController@index')->name('adm-news');
 Route::get('admin/news/create', 'Admin\NewsController@create')->name('adm-create-news');
 Route::get('admin/news/edit/{news}','Admin\NewsController@edit')->name('adm-edit-news');
 Route::get('admin/news/{news}','Admin\NewsController@destroy')->name('adm-delete-news');
+
+//home
+
 
 
 //pedidos

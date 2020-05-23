@@ -1,10 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-
-        <div class="card card-cascade wider reverse mt-5 pt-4">
-        <div class="">
-
+<div class="row ">
+       
+        
+          <div class="col"></div>
+          <div class="col-sm-10 indigo-text">
+            <div class="card card-cascade wider reverse mt-4 pt-3">
                 <!--Section: Content-->
                 <section class="dark-grey-text">
               
@@ -116,8 +118,8 @@
               
                   </div>
                   @else
-                  <h3><span class="label label-warning">No hay elementos</span></h3> 
-                  <a href="{{route('carrito')}}" class="btn btn-info">Comprar</a>     
+                  <h3 class="indigo-text h3 text-center ">No hay elementos</h3> 
+                  <a href="{{route('carrito')}}" class="btn btn-info ">Comprar</a>     
                   @endif
                   <!-- /.Shopping Cart table -->
               
@@ -126,7 +128,11 @@
               
               
               </div>
+          </div>
+        <div class="col"></div>
             </div>
+
+           
 
 
 

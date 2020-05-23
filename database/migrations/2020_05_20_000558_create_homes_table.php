@@ -17,15 +17,16 @@ class CreateHomesTable extends Migration
             
             
             $table->bigIncrements('id');
+            $table->text('homecode');
             $table->text('homedesc');
             $table->string('homeimg1')->nullable();
             $table->string('homeimg2')->nullable();
             $table->string('homeimg3')->nullable();
             $table->string('homeimg4')->nullable();
             $table->string('homeimg5')->nullable();
-            $table->string('homedir',100)->nullable();
-            $table->string('hometelf',10)->nullable();
-            $table->string('homeemail',100)->nullable();
+            $table->string('homedir')->nullable();
+            $table->string('hometelf')->nullable();
+            $table->string('homeemail')->nullable();
             $table->timestamps();
 
         });

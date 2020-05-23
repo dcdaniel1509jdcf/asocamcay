@@ -8,7 +8,8 @@
   </h3>
 
     </div>    
-
+    <div class="page">   
+      <div class="table-responsive">
     <table class="table  table-hover">
         <thead class="thead-light">
           <tr>
@@ -43,5 +44,11 @@
         </tbody>
       </table>
       
+    </div>
+    <hr>
+        
+      
+     
+    </div>
     </div>
       @endsection

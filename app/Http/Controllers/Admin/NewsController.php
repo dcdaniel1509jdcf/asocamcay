@@ -9,7 +9,7 @@ use App\News;
 class NewsController extends Controller
 {
     public function index(){
-        $news=News::orderBy('id','desc')->paginate(5);
+        $news=News::orderBy('id','desc')->paginate(10);
       // $message = $news ? 'Noticias disponibles' : 'No existen noticias!';
       
      
@@ -38,6 +38,7 @@ class NewsController extends Controller
             'title'=>'required|unique:news',
             'description'=>'required',
             'content'=>'required',
+            'image'=>'required',
          ]);
         
         
@@ -83,6 +84,13 @@ class NewsController extends Controller
 
     public function update(News $news, Request $request)
 {
+    $this->validate($request,[
+        'title'=>'required',
+        'description'=>'required',
+        'content'=>'required',
+       
+     ]);
+
     $news->title = $request->get('title');
     $news->description = $request->get('description');
     $news->content = $request->get('content');

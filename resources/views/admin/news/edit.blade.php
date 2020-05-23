@@ -23,12 +23,17 @@
                     'title',
                     null,
                     array(
-                        'class'=>'form-control',
+                        'class'=>'form-control @error(title) is-invalid @enderror',
                         'autofocus'=>'autofocus'
                         
                     )
                 )
                 !!}
+                @error('title')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
             </div>  
         
                   
@@ -40,10 +45,15 @@
                         'description', 
                         null, 
                         array(
-                            'class'=>'form-control'
+                            'class'=>'form-control  @error(description) is-invalid @enderror'
                         )
                     ) 
                 !!}
+                @error('description')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
             </div>
             
             <div class="form-group">
@@ -54,10 +64,15 @@
                         'content', 
                         null, 
                         array(
-                            'class'=>'form-control'
+                            'class'=>'form-control  @error(content) is-invalid @enderror'
                         )
                     ) 
                 !!}
+                @error('content')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
             </div>
         
           
@@ -88,9 +103,7 @@
     </div>
 
 <div class="col">
-    @if (count($errors)>0) 
-                @include('admin.partials.errors')
-            @endif
+    
 </div>
 </div>
 @endsection

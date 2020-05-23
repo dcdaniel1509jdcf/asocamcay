@@ -6,8 +6,9 @@
   <h3 class="rounded-top card-header  indigo lighten-0 white-text text-center py-4">
     <strong>Noticias Registradas </strong><a class="btn btn-warning btn-sm m-0 waves-effect" href="{{ route('adm-create-news') }}"><i class="fas fa-plus"></i></a>
   </h3> 
-    </div>    
-
+    </div> 
+    <div class="page">   
+    <div class="table-responsive">
     <table class="table  table-hover">
         <thead class="thead-light">
           <tr>
@@ -41,5 +42,8 @@
         </tbody>
       </table>
       
+</div>
+</div>
+    
     </div>
       @endsection

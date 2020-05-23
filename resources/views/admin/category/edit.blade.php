@@ -23,12 +23,16 @@
                     'name',
                     null,
                     array(
-                        'class'=>'form-control',
-                        'placeholder'=>'Ingresar el nombre.',
+                        'class'=>'form-control @error(name) is-invalid @enderror',
                         'autofocus'=>'autofocus'            
                     )
                 )
                 !!}
+                @error('name')
+    <span class="invalid-feedback" role="alert">
+        <strong>{{ $message }}</strong>
+    </span>
+    @enderror
     </div>    
     <div class="form-group">
             <label for="description">Descripcion:</label>
@@ -37,13 +41,17 @@
                 'description',
                 null,
                 array(
-                    'class'=>'form-control'
-                    
+                    'class'=>'form-control @error(description) is-invalid @enderror'
                 )
             )
             !!}
+            @error('description')
+    <span class="invalid-feedback" role="alert">
+        <strong>{{ $message }}</strong>
+    </span>
+    @enderror
     </div>
-
+    
 <div class="form-group">
 {!! Form::submit('Actualizar',array('class'=>'btn btn-primary')) !!}    
 <a href="{{ route('category') }}" class="btn btn-warning">Cancelar</a>

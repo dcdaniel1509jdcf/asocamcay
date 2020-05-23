@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Storage;
 class ProductController extends Controller
 {
     public function index(){
-        $products=Product::orderBy('id','desc')->paginate(5);
+        $products=Product::orderBy('id','desc')->paginate(10);
         //dd($products);
        // $products=Product::all();
         return view('admin.product.index',compact('products'));
@@ -68,6 +68,14 @@ class ProductController extends Controller
 
 public function update(Product $product, Request $request)
 {
+    $this->validate($request,[
+        'name'=>'required|regex:/^[\pL\s\-]+$/u',
+        'description'=>'required',
+        'extract'=>'required',
+        'price'=>'required|numeric',
+       
+       
+     ]);
     $product->name = $request->get('name');
     $product->description = $request->get('description');
     $product->extract = $request->get('extract');

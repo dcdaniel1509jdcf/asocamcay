@@ -46,6 +46,12 @@ class CategoryController extends Controller
     }
     public function update(Request $request, Category $category)
     {
+        $this->validate($request,[
+            'name'=>'required|regex:/^[\pL\s\-]+$/u',
+            'description'=>'required',
+            
+         ]);
+
         $category->fill($request->all());
         $category->slug=str_slug($request->get('name'));
         $updated=$category->save();

@@ -24,7 +24,7 @@ return [
     'before'               => 'El campo :attribute debe ser una fecha anterior a :date.',
     'before_or_equal'      => 'El campo :attribute debe ser una fecha anterior o igual a :date.',
     'between'              => [
-        'numeric' => 'El campo :attribute debe ser un valor entre :min y :max.',
+        'numeric' => 'El campo debe ser un valor entre :min y :max.',
         'file'    => 'El archivo :attribute debe pesar entre :min y :max kilobytes.',
         'string'  => 'El campo :attribute debe contener entre :min y :max caracteres.',
         'array'   => 'El campo :attribute debe contener entre :min y :max elementos.',
@@ -39,9 +39,9 @@ return [
     'digits_between'       => 'El campo :attribute debe contener entre :min y :max dígitos.',
     'dimensions'           => 'El campo :attribute tiene dimensiones de imagen inválidas.',
     'distinct'             => 'El campo :attribute tiene un valor duplicado.',
-    'email'                => 'El campo :attribute debe ser una dirección de correo válida.',
+    'email'                => 'El campo debe ser una dirección de correo válida.',
     'ends_with'            => 'El campo :attribute debe finalizar con alguno de los siguientes valores: :values',
-    'exists'               => 'El campo :attribute seleccionado no existe.',
+    'exists'               => 'El campo seleccionado no existe.',
     'file'                 => 'El campo :attribute debe ser un archivo.',
     'filled'               => 'El campo :attribute debe tener un valor.',
     'gt'                   => [
@@ -77,9 +77,9 @@ return [
         'array'   => 'El campo :attribute debe contener :value o menos elementos.',
     ],
     'max'                  => [
-        'numeric' => 'El campo :attribute no debe ser mayor a :max.',
+        'numeric' => 'El campo no debe ser mayor a :max.',
         'file'    => 'El archivo :attribute no debe pesar más de :max kilobytes.',
-        'string'  => 'El campo :attribute no debe contener más de :max caracteres.',
+        'string'  => 'El campo no debe contener más de :max caracteres.',
         'array'   => 'El campo :attribute no debe contener más de :max elementos.',
     ],
     'mimes'                => 'El campo :attribute debe ser un archivo de tipo: :values.',
@@ -87,7 +87,7 @@ return [
     'min'                  => [
         'numeric' => 'El campo :attribute debe ser al menos :min.',
         'file'    => 'El archivo :attribute debe pesar al menos :min kilobytes.',
-        'string'  => 'El campo :attribute debe contener al menos :min caracteres.',
+        'string'  => 'El campo debe contener al menos :min caracteres.',
         'array'   => 'El campo :attribute debe contener al menos :min elementos.',
     ],
     'not_in'               => 'El campo :attribute seleccionado es inválido.',
@@ -96,7 +96,7 @@ return [
     'password'             => 'La contraseña es incorrecta.',
     'present'              => 'El campo :attribute debe estar presente.',
     'regex'                => 'El formato del campo :attribute es inválido.',
-    'required'             => 'El campo :attribute es obligatorio.',
+    'required'             => 'El campo es obligatorio.',
     'required_if'          => 'El campo :attribute es obligatorio cuando el campo :other es :value.',
     'required_unless'      => 'El campo :attribute es requerido a menos que :other se encuentre en :values.',
     'required_with'        => 'El campo :attribute es obligatorio cuando :values está presente.',
@@ -113,7 +113,7 @@ return [
     'starts_with'          => 'El campo :attribute debe comenzar con uno de los siguientes valores: :values',
     'string'               => 'El campo :attribute debe ser una cadena de caracteres.',
     'timezone'             => 'El campo :attribute debe ser una zona horaria válida.',
-    'unique'               => 'El valor del campo :attribute ya está en uso.',
+    'unique'               => 'El valor del campo ya está en uso.',
     'uploaded'             => 'El campo :attribute no se pudo subir.',
     'url'                  => 'El formato del campo :attribute es inválido.',
     'uuid'                 => 'El campo :attribute debe ser un UUID válido.',
@@ -131,49 +131,50 @@ return [
 
     'custom' => [
         'name' => [
-            'required' => 'El Nombre es obligatorio',
+            'required' => 'El Campo es obligatorio',
             'alpha' => 'El Nombre acepta unicamente letras',
             'regex' => 'El Nombre puede contener letras.',
             'unique'=> 'El Nombre ya está en uso.',
         ],
         'description' => [
-            'required' => 'La Descripcion es obligatoria',
+            'required' => 'El Campo es obligatorio',
             'regex' => 'La Descripcion puede contener letras.',
         ],
         'extract' => [
-            'required' => 'El Peso es obligatorio',
+            'required' => 'El Campo es obligatorio',
         ],
         'price' => [
-            'required' => 'El Precio es obligatorio',
+            'required' => 'El Campo es obligatorio',
             'numeric'  => 'El Precio unicamente con números.',
         ],
         'image' => [
-            'required' => 'la imagen es obligatoria',
+            'required' => 'El Campo es obligatorio',
             'image'    => 'El archivo debe ser una imagen.',
         ],
         'visible' => [
-            'required' => 'La visibilidad es obligatoria',
+            'required' => 'El Campo es obligatorio',
         ],
         'last_name' => [
-            'required' => 'El Apellido es obligatorio',
+            'required' => 'El Campo es obligatorio',
             'alpha' => 'El Apellido acepta unicamente letras',
             'regex' => 'El Apellido puede contener letras.',
             'unique'=> 'El Apellido ya está en uso.',
         ],
         'ci' => [
-            'required' => 'La cedula o Ruc es obligatoria',
+            'required' => 'El Campo es obligatorio',
             'unique'=> 'La cedula o Ruc ya está en uso.',
             'digits_between'       => 'La cedula o Ruc debe contener entre :min y :max dígitos.',
             'integer'              => 'La cedula o Ruc debe ser un número entero.',
         ],
         'contact' => [
-            'required' => 'El munero de contacto es obligatorio',
+            'required' => 'El Campo es obligatorio',
             'digits_between'       => 'El munero de contacto debe contener entre :min y :max dígitos.',
             'integer'              => 'El munero de contacto debe ser un número entero.',
         ],     
         'address' => [
-            'required' => 'La direccion es obligatoria',
-        ],         
+            'required' => 'El Campo es obligatorio',
+        ],       
+        
     ],
 
     /*

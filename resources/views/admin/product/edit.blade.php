@@ -29,13 +29,18 @@
                     'name',
                     null,
                     array(
-                        'class'=>'form-control',
+                        'class'=>'form-control @error(name) is-invalid @enderror',
                         'placeholder'=>'Ingresar el nombre.',
                         'autofocus'=>'autofocus'
                         
                     )
                 )
                 !!}
+                @error('name')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
             </div>  
         
         <div class="form-group">
@@ -46,11 +51,16 @@
                     'extract', 
                     null, 
                     array(
-                        'class'=>'form-control',
+                        'class'=>'form-control @error(extract) is-invalid @enderror',
                         
                     )
                 ) 
             !!}
+            @error('extract')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
         </div>
         
         <div class="form-group">
@@ -61,10 +71,15 @@
                     'description', 
                     null, 
                     array(
-                        'class'=>'form-control'
+                        'class'=>'form-control @error(description) is-invalid @enderror'
                     )
                 ) 
             !!}
+            @error('description')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
         </div>
         
         <div class="form-group">
@@ -75,24 +90,32 @@
                     'price', 
                     null, 
                     array(
-                        'class'=>'form-control',
+                        'class'=>'form-control @error(price) is-invalid @enderror',
                         
                     )
                 ) 
             !!}
+            @error('price')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
         </div>
         
         <div class="form-group">
-            <label for="image">Imagen:</label>
-            
+            <label for="image" >Imagen:</label>
             {!! 
                 Form::file('image')  
             !!}
         </div>
-        
         <div class="form-group">
-            <label for="visible">Visible:</label>
-            <input type="checkbox" name="visible" {{ $product->visible == 1 ? "checked='checked'" : '' }}>
+    
+           
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox"  class="custom-control-input" id="defaultUnchecked" name="visible" {{ $product->visible == 1 ? "checked='checked'" : '' }}>
+           
+                <label class="custom-control-label" for="defaultUnchecked">Mostrar producto?</label>
+                 </div>
         </div>
 
         
@@ -109,9 +132,7 @@
 
 </div>
 <div class="col">
-    @if (count($errors)>0) 
-    @include('admin.partials.errors')
-@endif
+   
 </div> 
 </div>
 @endsection

@@ -13,7 +13,7 @@
       <div class="container">
         <div class="row">
           <!-- Team Member 1 -->
-          <div class="col-xl-3 col-sm-6 mb-4">
+          <div class="col-sm-3 col-sm-6 mb-4">
             <div class="card border-0 shadow">
               
               <a href="{{ route('category') }}">
@@ -25,7 +25,7 @@
             </div>
           </div>
           <!-- Team Member 2 -->
-          <div class="col-xl-3 col-sm-6 mb-4">
+          <div class="col-sm-3 col-sm-6 mb-4">
             <div class="card border-0 shadow">
               
               <a href="{{ route('adm-product') }}">
@@ -38,7 +38,7 @@
           </div>
           
           <!-- Usuarios -->
-          <div class="col-xl-3 col-sm-6 mb-4">
+          <div class="col-sm-3 col-sm-6 mb-4">
             <div class="card border-0 shadow">
               
               <a href="{{ route('adm-user') }}">
@@ -51,7 +51,7 @@
           </div>
         
           <!-- PEdidos -->
-          <div class="col-xl-3 col-sm-6 mb-4">
+          <div class="col-sm-3 col-sm-6 mb-4">
             <div class="card border-0 shadow">
               <a href="{{ route('adm-order') }}">
               <div class="card-body text-center">
@@ -63,7 +63,7 @@
             </div>
           </div>
           <!-- Recetas -->
-          <div class="col-xl-3 col-sm-6 mb-4">
+          <div class="col-sm-3 col-sm-6 mb-4">
             <div class="card border-0 shadow">
               <a href="{{ route('adm-recipe') }}">
               <div class="card-body text-center">
@@ -76,7 +76,7 @@
           </div>
 
           <!-- Reportes -->
-          <div class="col-xl-3 col-sm-6 mb-4">
+          <div class="col-sm-3 col-sm-6 mb-4">
             <div class="card border-0 shadow">
               <a href="{{ route('adm-reports') }}">
               <div class="card-body text-center">
@@ -89,12 +89,25 @@
           </div>
 
           <!-- Acceso a Noticias -->
-          <div class="col-xl-3 col-sm-6 mb-4">
+          <div class="col-sm-3 col-sm-6 mb-4">
             <div class="card border-0 shadow">
               <a href="{{ route('adm-news') }}">
               <div class="card-body text-center">
                 
                 <h2 class="card-title mb-0"><i class="far fa-newspaper"></i> Noticias</h2>
+                <div class="card-text text-black-50"></div>
+              </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Acceso a Noticias -->
+          <div class="col-sm-3 col-sm-6 mb-4">
+            <div class="card border-0 shadow">
+              <a href="{{ route('adm-edit-home') }}">
+              <div class="card-body text-center">
+                
+                <h2 class="card-title mb-0"><i class="fas fa-home"></i> Pagina Principal</h2>
                 <div class="card-text text-black-50"></div>
               </div>
               </a>

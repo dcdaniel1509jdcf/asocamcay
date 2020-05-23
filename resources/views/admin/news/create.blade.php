@@ -25,12 +25,17 @@
                     'title', 
                     null, 
                     array(
-                        'class'=>'form-control',
+                        'class'=>'form-control @error(title) is-invalid @enderror',
                         'placeholder' => 'Ingresa el Titulo',
                         'autofocus' => 'autofocus'
                     )
                 ) 
             !!}
+            @error('title')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+        @enderror 
         </div>
         
         <div class="form-group">
@@ -41,38 +46,53 @@
                     'description', 
                     null, 
                     array(
-                        'class'=>'form-control',
+                        'class'=>'form-control @error(description) is-invalid @enderror',
                         'placeholder' => 'Ingrese una descripcion',
                     )
                 ) 
             !!}
+            @error('description')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+        @enderror 
         </div>
         
         <div class="form-group">
-            <label for="content3">Contenido:</label>
+            <label for="content">Contenido:</label>
             
             {!! 
                 Form::textarea(
                     'content', 
                     null, 
                     array(
-                        'class'=>'form-control',
+                        'class'=>'form-control @error(content) is-invalid @enderror',
                         'id'=>'content'
                     )
                 ) 
             !!}
+            @error('content')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+        @enderror 
         </div>
        
-        
+             
 
        
         
         <div class="form-group">
-            <label for="image">Imagen:</label>
+            <label for="image" class="">Imagen:</label>
             
             {!! 
                 Form::file('image') 
             !!}
+            @error('image')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+        @enderror
         </div>
         <div class="form-group">
             <label for="file">Archivo:</label>
@@ -95,9 +115,7 @@
         </div>
 </div>
 <div class="col">
-    @if (count($errors)>0) 
-                @include('admin.partials.errors')
-            @endif
+  
 </div>
 </div>
 @endsection

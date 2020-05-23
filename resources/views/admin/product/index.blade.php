@@ -8,10 +8,11 @@
     <strong>Productos Registrados </strong><a class="btn btn-warning btn-sm m-0 waves-effect" href="{{ route('adm-create-product') }}"><i class="fas fa-plus"></i></a>
   </h3>
     
-    </div>    
-
-    <table class="table  table-hover">
-        <thead class="thead-light">
+    </div> 
+    <div class="page">   
+    <div class="table-responsive">
+    <table class="table  table-striped table-borderless table-hoverr">
+        <thead >
           <tr>
             <th>Editar</th>
             <th>Imagen</th>
@@ -47,6 +48,11 @@
          
         </tbody>
       </table>
+    </div>
+    <hr>
+        
+      
       <?php echo $products->render(); ?>
-</div>
+    </div>
+    </div>
       @endsection

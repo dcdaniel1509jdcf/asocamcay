@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <main class="mt-5 pt-4">
+    <main class="pt-2">
             <div class="container wow fadeIn">
               <h2 class="my-5 h2 text-center">Detalle del Pedido</h2>
               <div class="row">

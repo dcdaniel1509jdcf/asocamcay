@@ -24,13 +24,18 @@
                                     'name', 
                                     null, 
                                     array(
-                                        'class'=>'form-control',
+                                        'class'=>'form-control @error(name) is-invalid @enderror',
                                         'placeholder' => 'Ingresa el nombre...',
                                         'autofocus' => 'autofocus',
                                         //'required' => 'required'
                                     )
                                 ) 
                             !!}
+                            @error('name')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
                         </div>
                         
                         <div class="form-group">
@@ -41,12 +46,17 @@
                                     'last_name', 
                                     null, 
                                     array(
-                                        'class'=>'form-control',
+                                        'class'=>'form-control @error(last_name) is-invalid @enderror',
                                         'placeholder' => 'Ingresa los apellidos...',
                                         //'required' => 'required'
                                     )
                                 ) 
                             !!}
+                @error('last_name')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
                         </div>
                         <div class="form-group">
                                 <label for="ci">Cedula:</label>
@@ -56,12 +66,17 @@
                                         'ci', 
                                         null, 
                                         array(
-                                            'class'=>'form-control',
+                                            'class'=>'form-control @error(ci) is-invalid @enderror',
                                             'placeholder' => 'Ingresa la ci...',
                                             //'required' => 'required'
                                         )
                                     ) 
                                 !!}
+                                @error('ci')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+                @enderror
                             </div>
                             <div class="form-group">
                                     <label for="contact">Celular:</label>
@@ -71,12 +86,17 @@
                                             'contact', 
                                             null, 
                                             array(
-                                                'class'=>'form-control',
+                                                'class'=>'form-control @error(contact) is-invalid @enderror',
                                                 'placeholder' => '022222222 / 0999999999',
                                                 //'required' => 'required'
                                             )
                                         ) 
                                     !!}
+                                    @error('contact')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
                                 </div>
                         <div class="form-group">
                             <label for="email">Correo:</label>
@@ -86,12 +106,17 @@
                                     'email', 
                                     null, 
                                     array(
-                                        'class'=>'form-control',
+                                        'class'=>'form-control @error(email) is-invalid @enderror',
                                         'placeholder' => 'Ingresa el correo...',
                                         //'required' => 'required'
                                     )
                                 ) 
                             !!}
+                            @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>                                                
                         <div class="form-group">
                             <label for="password">Password:</label>
@@ -100,11 +125,16 @@
                                 Form::password(
                                     'password', 
                                     array(
-                                        'class'=>'form-control',
+                                        'class'=>'form-control @error(password) is-invalid @enderror',
                                         //'required' => 'required'
                                     )
                                 ) 
                             !!}
+                            @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>
                         
                         <div class="form-group">
@@ -114,11 +144,16 @@
                                 Form::password(
                                     'password_confirmation',
                                     array(
-                                        'class'=>'form-control',
+                                        'class'=>'form-control @error(password_confirmation) is-invalid @enderror',
                                         //'required' => 'required'
                                     )
                                 ) 
                             !!}
+                            @error('password_confirmation')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>
                         
                         <div class="form-group">
@@ -136,10 +171,15 @@
                                     'address', 
                                     null, 
                                     array(
-                                        'class'=>'form-control'
+                                        'class'=>'form-control @error(address) is-invalid @enderror'
                                     )
                                 ) 
                             !!}
+                            @error('address')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>
                         
                         <div class="form-group">
@@ -164,9 +204,7 @@
         </div>
                     </div>
                     <div class="col">
-                        @if (count($errors)>0) 
-                @include('admin.partials.errors')
-            @endif
+                        
                     </div>
 </div>
 @endsection

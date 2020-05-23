@@ -9,7 +9,7 @@ use App\Recipe;
 class RecipeController extends Controller
 {
     public function index(){
-        $recipe=Recipe::orderBy('id','desc')->paginate(5);
+        $recipe=Recipe::all();
         //dd($products);
        // $products=Product::all();
         return view('admin.recipe.index',compact('recipe'));
@@ -33,6 +33,16 @@ class RecipeController extends Controller
     }
 
     public function store(Request $request){
+
+        $this->validate($request,[
+            'name'=>'required|regex:/^[\pL\s\-]+$/u|unique:recipes',
+            'description'=>'required',
+            'ingredients'=>'required',
+            'image'=>'required',
+            
+           
+         ]);
+         
         if($request->file('image')){
             $file=$request->file('image');
             //$path=Storage::disk('public')->put($request->file('image'));
@@ -53,9 +63,9 @@ class RecipeController extends Controller
  
 	$product = Recipe::create($data);
  
-		//$message = $product ? 'Producto agregado correctamente!' : 'El producto NO pudo agregarse!';
+		$message = $product ? 'Agregado correctamente!' : 'NO pudo agregarse!';
         
-        return redirect()->route('adm-recipe');//->with('message', $message);
+        return redirect()->route('adm-recipe')->with('message', $message);
 
     }
 
@@ -65,9 +75,9 @@ class RecipeController extends Controller
 {
     $deleted = $recipe->delete();
        
-   // $message = $deleted ? 'Producto eliminado correctamente!' : 'El producto NO pudo eliminarse!';
+    $message = $deleted ? 'Eliminado correctamente!' : 'NO pudo eliminarse!';
         
-    return redirect()->route('adm-recipe');//->with('message', $message);
+    return redirect()->route('adm-recipe')->with('message', $message);
 }
 
 
@@ -79,6 +89,17 @@ public function edit(Recipe $recipe)
 
 public function update(Recipe $recipe, Request $request)
 {
+
+    
+    $this->validate($request,[
+        'name'=>'required|regex:/^[\pL\s\-]+$/u',
+        'description'=>'required',
+        'ingredients'=>'required',
+        
+        
+       
+     ]);
+
     if($request->file('image')){
         $file=$request->file('image');
         //$path=Storage::disk('public')->put($request->file('image'));

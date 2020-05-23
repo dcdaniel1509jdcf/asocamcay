@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="mt-5 pt-4">
+<div class="mt-2 pt-4">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-sm-6">
             
                 <div class="card">
 
@@ -40,18 +40,7 @@
                                   </span>
                               @enderror
                             </div>
-                            <div class="d-flex justify-content-around">
-                              <div>
-                                <!-- Remember me -->
-                                <div class="custom-control custom-checkbox">
-                                  <input class="custom-control-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                                  <label class="custom-control-label" for="remember">
-                                      {{ __(' Recordar ') }}
-                                  </label>  
-                              </div>
-                              </div>
-                              
-                            </div>
+                          
                       
                             <!-- Sign in button -->
                             
@@ -59,8 +48,8 @@
                                   {{ __('Ingresar') }}
                               </button>
                             <!-- Register -->
-                            <p>Not a member?
-                              <a href="{{ route('register') }}">Registrar</a>
+                            
+                              <a href="{{ route('register') }}">Crear Cuenta</a>
                             </p>
                           </form>
                         </div>
