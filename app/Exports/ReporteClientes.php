@@ -22,9 +22,7 @@ class ReporteClientes implements FromCollection,WithHeadings
     * @return \Illuminate\Support\Collection
     */
 
-    private $data;
-    private $data1;
-
+    
     public function __construct()
     {
        
