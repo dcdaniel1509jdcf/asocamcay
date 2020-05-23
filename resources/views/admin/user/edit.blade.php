@@ -5,7 +5,7 @@
     <div class="col">
          
         </div> 
-    <div class="col-5">       
+    <div class="col-sm-6">       
         <div class="card">
 
             <h3 class="card-header info-color white-text text-center py-4">
