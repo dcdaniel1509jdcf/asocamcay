@@ -40,7 +40,7 @@ class ReporteClientes implements FromCollection,WithHeadings
     {
 
             $users=DB::table('users')
-            ->select('id','ci','last_name','name','.email','contact','address')
+            ->select('id','ci','last_name','name','email','contact','address')
             ->orderBy('id', 'DESC')
             ->get();
             
