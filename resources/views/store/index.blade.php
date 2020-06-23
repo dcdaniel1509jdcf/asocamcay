@@ -9,7 +9,7 @@
      
       @if ($products->isEmpty())
       <article class="article">
-        <h3 class="indigo-text h3 text-center">Recetas</h3>
+        <h3 class="indigo-text h3 text-center">Productos</h3>
         <h4 class="h4 text-center indigo-text">No Disponibles</h4>
       </article>
       @endif 
