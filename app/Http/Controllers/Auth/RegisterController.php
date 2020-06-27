@@ -53,7 +53,7 @@ class RegisterController extends Controller
        
         
             return Validator::make($data, [
-                'homecode' => ['exists:Homes'],
+                'homecode' => ['exists:homes'],
             'name' => ['required', 'string', 'max:20'],
             'last_name' => ['required', 'string', 'max:20'],
             'email' => ['required', 'string', 'email', 'max:50', 'unique:users'],
