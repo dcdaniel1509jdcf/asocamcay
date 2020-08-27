@@ -90,21 +90,18 @@ class CartController extends Controller
         $cart= \Session::get('cart');
         $shipping = 0;
         $total=$this->total();
-       // dd($total);
         $order = Order::create([
-			'subtotal' => $total,
-			'shipping' => $shipping,
+            'subtotal' => $total,
+        'shipping'=>$shipping,
 			'user_id' => \Auth::user()->id
         ]);
         foreach($cart as $producto){
 			$this->saveOrderItem($producto, $order->id);
 		}
         \Session::forget('cart');
-        
         return redirect()->route('carrito');
     }
     
- 
 	protected function saveOrderItem($producto, $order_id)
 	{
 		OrderItem::create([

@@ -86,11 +86,7 @@
                         
                                 <!-- Left -->
                                 <ul class="navbar-nav mr-auto">
-                                  <li class="nav-item ">
-                                    <a class="nav-link waves-effect" href="{{ url('/') }}">Inicio
-                                      <span class="sr-only">(current)</span>
-                                    </a>
-                                  </li>
+                                  
                                   <li class="nav-item">
                                     <a class="nav-link btn-outline-success rounded mb-0 waves-effect" href="{{ route('carrito') }}" >Compra  <i class="fas fa-shopping-cart"></i></a>
                                   </li>

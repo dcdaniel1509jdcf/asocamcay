@@ -15,14 +15,11 @@ class ProductController extends Controller
 {
     public function index(){
         $products=Product::orderBy('id','desc')->paginate(10);
-        //dd($products);
-       // $products=Product::all();
         return view('admin.product.index',compact('products'));
     }
     public function create()
     {
         $categories = Category::orderBy('id', 'asc')->pluck('name', 'id');
-        
         return view('admin.product.create', compact('categories'));
     
     }
@@ -33,7 +30,6 @@ class ProductController extends Controller
     public function store(SaveProductRequest $request){
         if($request->file('image')){
             $file=$request->file('image');
-            //$path=Storage::disk('public')->put($request->file('image'));
             $name=time().$file->getClientOriginalName();
             $path=public_path().'/imagenes/productos/';
             $file->move($path,$name);        
